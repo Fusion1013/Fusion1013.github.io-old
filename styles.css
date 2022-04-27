@@ -1,0 +1,35 @@
+
+/* Background Gradient */
+
+#grad {
+    background-image: linear-gradient(to bottom right, #1F3955, #19A7A9);
+    height: 100%;
+}
+
+body, html { height: 100%; }
+
+body {
+    margin: 0;
+}
+
+/* Center Panel */
+#center-panel {
+    position: absolute;
+    background-color: white;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 50%;
+    height: 80%;
+}
+
+/* Text Formatting */
+h1 {
+    margin: 0;
+}
+
+#page-header {
+    padding-top: 1%;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
