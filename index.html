@@ -3,14 +3,128 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles.css">
-    <body>
-        <div id="grad">
-            <div>
-                <h1 id="page-header">Fusion1013</h1>
-            </div>
-            <div id="center-panel">
-                <h1 id="center-text">test</h1>
+    <head>
+        <script src="tabs.js"></script>
+    </head>
+    <body id="grad">
+        <div>
+            <div class="main wrapper clearfix">
+                <!-- HEADER START -->
+                <header id="header">
+                    <div id="logo" style="display: block;">
+                        <h2>Fusion1013</h2>
+                        <h4>Game Developer</h4>
+                    </div>
+                </header>
+                <!-- HEADER END -->
+
+                <!-- MAIN TAB CONTAINER -->
+                <div id="tab-container" class="tab-container" data-easytabs="true">
+                    <!-- TAB LIST -->
+                    <button class="tablink" onclick="openPage('ABOUT ME', this, 'gray')" id="defaultOpen">ABOUT ME</button>
+                    <button class="tablink" onclick="openPage('RESUME', this, 'gray')">RESUME</button>
+                    <button class="tablink" onclick="openPage('PORTFOLIO', this, 'gray')">PORTFOLIO</button>
+                    <button class="tablink" onclick="openPage('BLOG', this, 'gray')">BLOG</button>
+                    <!-- END TAB LIST -->
+
+                    <div id="tab-data-wrap">
+                        <div id="ABOUT ME" class="tabcontent">
+                            <h3>ABOUT ME</h3>
+                        </div>
+
+                        <div id="RESUME" class="tabcontent">
+                            <h3>RESUME</h3>
+                            <p>Some news this fine day!</p>
+                        </div>
+        
+                        <!-- PORTFOLIO TAB DATA -->
+                        <div id="PORTFOLIO" style="position: static; visibility: visible;" class="tabcontent">
+                            <section class="clearfix">
+                                <div class="g3">
+                                    <ul class="no-list-work">
+                                        <li>
+                                            <div class="g4">
+                                                <h3>CobaltCore </h3>
+                                                <h5>Java | Bukkit/Spigot plugin</h5>
+                                                <p>
+                                                    CobaltCore is a 
+                                                    <a href="https://www.spigotmc.org/wiki/about-spigot/"></a>
+                                                     which provides an API for developers to use to streamline the plugin development process.
+                                                </p>
+                                                <p class="nomargin">Highlights of CobaltCore include:</p>
+                                                <dl>
+                                                    <dt>
+                                                        Data storage system that allows developers to switch between different data storage implementations, such as SQLite, MongoDB, etc.
+                                                    </dt>
+                                                </dl>
+                                            </div>
+                                            <div class="break"></div>
+                                        </li>
+                                        <li>
+                                            <div class="g4">
+                                                <h3>CobaltServer </h3>
+                                                <h5>Java | Bukkit/Spigot plugin</h5>
+                                                <p>
+                                                    CobaltServer is a 
+                                                    <a href="https://www.spigotmc.org/wiki/about-spigot/"></a>
+                                                </p>
+                                                <p class="nomargin">Highlights of CobaltCore include:</p>
+                                                <dl>
+                                                    <dt>
+                                                    </dt>
+                                                </dl>
+                                            </div>
+                                            <div class="break"></div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </section>
+                        </div>
+        
+                        <div id="BLOG" class="tabcontent">
+                            <h3>BLOG</h3>
+                            <p>Who we are and what we do.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!--
+                <div id="center-panel">
+                    <button class="tablink" onclick="openPage('ABOUT ME', this, 'gray')" id="defaultOpen">ABOUT ME</button>
+                    <button class="tablink" onclick="openPage('RESUME', this, 'gray')">RESUME</button>
+                    <button class="tablink" onclick="openPage('PORTFOLIO', this, 'gray')">PORTFOLIO</button>
+                    <button class="tablink" onclick="openPage('BLOG', this, 'gray')">BLOG</button>
+    
+                    <div id="ABOUT ME" class="tabcontent">
+                        <h3>
+                            ABOUT ME
+                            <a href="https://github.com/JorelAli/CommandAPI">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </h3>
+                    </div>
+    
+                    <div id="RESUME" class="tabcontent">
+                        <h3>RESUME</h3>
+                        <p>Some news this fine day!</p>
+                    </div>
+    
+                    <div id="PORTFOLIO" class="tabcontent">
+                        <h3>PORTFOLIO</h3>
+                        <p>Get in touch, or swing by for a cup of coffee.</p>
+                    </div>
+    
+                    <div id="BLOG" class="tabcontent">
+                        <h3>BLOG</h3>
+                        <p>Who we are and what we do.</p>
+                    </div>
+                </div>
+                -->
             </div>
         </div>
     </body>
+    <script>
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+    </script>
 </html>

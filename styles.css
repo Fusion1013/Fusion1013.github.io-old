@@ -1,15 +1,245 @@
 
-/* Background Gradient */
+/* BASE */
+
+html {
+    height: 100%;
+    font-size: 100%;
+    overflow: hidden;
+    overflow-y: scroll;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    margin: 0;
+    height: 100%;
+    text-rendering: optimizeLegibility;
+    overflow: hidden;
+    overflow-y: scroll;
+    color: #666;
+}
+
+p.nomargin {
+    margin: 0 0 0 0;
+}
+
+/* TEXT */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #444;
+}
+
+h1 {
+    margin: 0;
+    font-size: 3.75em;
+    line-height: 1.2em;
+    margin-bottom: 0.4em
+}
+
+
+/* 60px / 72px */
+
+h2 {
+    margin: 0;
+    font-size: 3em;
+    line-height: 1em;
+    margin-bottom: 0.5em
+}
+
+
+/* 48px / 48px */
+
+h3 {
+    margin: 0;
+    font-size: 2.25em;
+    line-height: 1.3333333333333333333333333333333em;
+    margin-bottom: 0.6667em
+}
+
+
+/* 36px / 48px */
+
+h4 {
+    margin: 0;
+    font-size: 1.5em;
+    line-height: 1em;
+    margin-bottom: 1em
+}
+
+
+/* 24px / 24px */
+
+h5 {
+    margin: 0;
+    font-size: 1.3125em;
+    line-height: 1.1428571428571428571428571428571em;
+    margin-bottom: 1.1428571428571428571428571428571em
+}
+
+
+/* 21px / 24px */
+
+h6 {
+    margin: 0;
+    font-size: 1.125em;
+    line-height: 1.3333333333333333333333333333333em;
+    margin-bottom: 1.3333333333333333333333333333333em;
+    text-align: center
+}
+
+/* CODE */
+
+pre {
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word
+}
+
+
+/* Allow line wrapping of 'pre' */
+
+pre,
+code,
+kbd,
+samp {
+    font-size: 1em;
+    line-height: 1.5em;
+    margin-bottom: 1.5em;
+    font-family: Menlo, Consolas, 'DejaVu Sans Mono', Monaco, monospace
+}
+
+/* BACKGROUND GRADIENT */
 
 #grad {
     background-image: linear-gradient(to bottom right, #1F3955, #19A7A9);
     height: 100%;
 }
 
-body, html { height: 100%; }
+/* COLUMN GRID */
 
-body {
-    margin: 0;
+.g1,
+.g2,
+.g3,
+.g4 {
+    display: block;
+    position: relative;
+    margin-left: 1%;
+    margin-right: 1%
+}
+
+
+/* 1 column grid */
+
+.g1,
+.g2,
+.g3,
+.g4 {
+    width: 98.0%
+}
+
+/* WRAPPER */
+
+.main {
+    padding-top: 50px;
+    max-width: 1020px;
+}
+
+.wrapper {
+    margin: 0 auto;
+}
+
+/* UTILITY */
+
+.clear {
+    clear: both;
+}
+
+.clearfix:after {
+    content: ".";
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
+}
+
+.no-list {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+.break {
+    padding-bottom: 1em;
+    clear: both;
+}
+
+/* LISTS */
+
+ul,
+ol {
+    list-style-position: inside;
+    padding: 0
+}
+
+li ul,
+li ol {
+    margin: 0 1.5em;
+    display: list-item;
+    list-style-type: disc;
+}
+
+dl dd {
+    margin-left: 1em;
+    display: list-item;
+    list-style-type: none;
+}
+
+dd::before {
+    content: "\f0da  ";
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+}
+
+dt::before {
+    content: "\f0da  ";
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+}
+
+dt {
+    font-family: 'Helvetica', sans-serif
+}
+
+@media (prefers-color-scheme: dark) {
+    dt,
+    dd {
+        color: #bababa;
+    }
+}
+   
+
+/* HEADER */
+
+#header {
+    margin-bottom: 2em;
+}
+
+#header #logo {
+    text-align: center;
+    display: none;
+}
+
+#header h4 {
+    margin-bottom: 0px;
+}
+
+#header .visible {
+    opacity: 1;
 }
 
 /* Center Panel */
@@ -23,13 +253,58 @@ body {
     height: 80%;
 }
 
-/* Text Formatting */
-h1 {
-    margin: 0;
+#tab-data-wrap {
+    padding: 30px 20px;
+    background: #fff;
+    border: 1px solid #f1f1f1;
+    box-shadow: 0px 6px #c0392b;
+    border-radius: 0px 0px 4px 4px;
 }
 
-#page-header {
-    padding-top: 1%;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
+/* Style tab links */
+.tablink {
+    background-color: #555;
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 17px;
+    width: 25%;
+}
+
+.tablink:hover {
+    background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+    color: black;
+    display: none;
+    padding: 50px 20px;
+}
+
+#Home {background-color: white;}
+#News {background-color: white;}
+#Contact {background-color: white;}
+#About {background-color: white;}
+
+/* WorkExperience */
+
+.work li {
+    border-bottom: 1px solid #f1f1f1;
+    margin-bottom: 2em;
+}
+
+.work li span {
+    float: right;
+}
+
+.work li h5 {
+    float: left;
+}
+
+.work li p {
+    clear: both;
 }
